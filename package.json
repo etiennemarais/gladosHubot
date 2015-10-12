@@ -1,12 +1,14 @@
 {
   "name": "glados",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "author": "Etienne Marais <etienne.marais@olx.com>",
   "description": "Glados is a simple bot for slack",
   "dependencies": {
     "hubot": "^2.16.0",
+    "hubot-business-cat": "^1.2.5",
     "hubot-diagnostics": "0.0.1",
+    "hubot-fliptable": "^1.2.0",
     "hubot-google-images": "^0.2.2",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.1.1",
@@ -15,8 +17,10 @@
     "hubot-pugme": "^0.1.0",
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
+    "hubot-seriouslyguys": "^1.0.0",
     "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^3.3.0"
+    "hubot-slack": "^3.3.0",
+    "hubot-standup-alarm": "0.0.7"
   },
   "engines": {
     "node": "0.10.x"
