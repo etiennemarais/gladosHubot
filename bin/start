@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Enter working directory
+cd ../
+
+# Update Hubot's code
+git pull origin master
+
+# Kill current instance of hubot. (Note: 'hubot' is to be replaced with your bot's name)
+#curl -F 'text=jarvis die' -X POST localhost/hubot/slack-webhook
+
+# Set hubot environment variables. Again.
+export HUBOT_SLACK_TOKEN=<TOKEN HERE>
+export Hubot_SLACK_TEAM=olx-ssa
+export Hubot_SLACK_BOTNAME=glados
+export HUBOT_LOG_LEVEL=debug
+
+# Restart Hubot (and make it listen to Slack)
+./bin/hubot --adapter slack > hubot.log 2>&1 &
