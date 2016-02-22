@@ -5,4 +5,10 @@ set -e
 npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
-exec node_modules/.bin/hubot --name "jarvis" "$@"
+# Set hubot environment variables. Again.
+export HUBOT_SLACK_TOKEN=<TOKEN HERE>
+export Hubot_SLACK_TEAM=olx-ssa
+export Hubot_SLACK_BOTNAME=glados
+export HUBOT_LOG_LEVEL=debug
+
+exec node_modules/.bin/hubot --adapter slack > hubot.log 2>&1 --name "jarvis" "$@"
