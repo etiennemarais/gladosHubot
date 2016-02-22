@@ -7,8 +7,8 @@ export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
 # Set hubot environment variables. Again.
 export HUBOT_SLACK_TOKEN=<TOKEN HERE>
-export Hubot_SLACK_TEAM=olx-ssa
-export Hubot_SLACK_BOTNAME=glados
+export HUBOT_SLACK_TEAM=olx-ssa
+export HUBOT_SLACK_BOTNAME=glados
 export HUBOT_LOG_LEVEL=debug
 LOGFILE="/var/log/hubot/hubot.log"
 
