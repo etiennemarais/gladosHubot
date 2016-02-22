@@ -1,0 +1,14 @@
+#!/bin/bash
+LOGFILE="/var/log/hubot/hubot.log"
+PID=`ps -ef |grep hubot |grep coffee|grep -v grep | grep -v bash |awk -F ' ' '{print $2}'`
+
+if [ -z "$PID" ]; then
+  echo "No processes to kill" >> $LOGFILE
+  exit 0
+else
+  echo "$PID" > $PIDFILE
+  for i in $PID;do
+    echo "Killing process $PID" >> $LOGFILE
+    kill $i
+  done
+fi

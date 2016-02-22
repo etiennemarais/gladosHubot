@@ -10,5 +10,6 @@ export HUBOT_SLACK_TOKEN=<TOKEN HERE>
 export Hubot_SLACK_TEAM=olx-ssa
 export Hubot_SLACK_BOTNAME=glados
 export HUBOT_LOG_LEVEL=debug
+LOGFILE="/var/log/hubot/hubot.log"
 
-exec node_modules/.bin/hubot --adapter slack > hubot.log 2>&1 --name "jarvis" "$@"
+exec node_modules/.bin/hubot --adapter slack > $LOGFILE 2>&1 --name "jarvis" "$@"
