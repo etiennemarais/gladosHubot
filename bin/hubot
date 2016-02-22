@@ -12,4 +12,4 @@ export HUBOT_SLACK_BOTNAME=glados
 export HUBOT_LOG_LEVEL=debug
 LOGFILE="/var/log/hubot/hubot.log"
 
-exec node_modules/.bin/hubot --adapter slack > $LOGFILE 2>&1 --name "jarvis" "$@"
+exec node_modules/.bin/hubot --adapter slack > $LOGFILE 2>&1 &

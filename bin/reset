@@ -6,12 +6,9 @@ if [ -z "$PID" ]; then
   echo "No processes to kill" >> $LOGFILE
   exit 0
 else
-  echo "$PID" > $PIDFILE
+  echo "$PID"
   for i in $PID;do
     echo "Killing process $PID" >> $LOGFILE
     kill $i
   done
 fi
-
-# Restart
-./hubot
